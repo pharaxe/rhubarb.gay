@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies & build
         run: |
-          yarn ci
+          yarn yarn install --frozen-lockfile
           yarn run build
 
       - name: Deploy

@@ -24,6 +24,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/css/");
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
   eleventyConfig.addPassthroughCopy({ "./src/img/favicon": "/" });
+  eleventyConfig.addPassthroughCopy("./CNAME");
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
   return {

@@ -72,7 +72,7 @@ h6 {
 /* from https://www.joshwcomeau.com/css/custom-css-reset/ */
 .container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-end;
   flex-direction: row;
   flex: 1;

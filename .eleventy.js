@@ -1,3 +1,4 @@
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const Image = require("@11ty/eleventy-img");
 
 async function imageShortcode(src, alt, sizes) {
@@ -23,6 +24,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/css/");
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
   eleventyConfig.addPassthroughCopy({ "./src/img/favicon": "/" });
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
   return {
     dir: {

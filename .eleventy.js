@@ -1,5 +1,5 @@
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
-const Image = require("@11ty/eleventy-img");
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+import Image from "@11ty/eleventy-img";
 
 async function imageShortcode(src, alt, sizes) {
   let metadata = await Image(src, {
@@ -19,7 +19,7 @@ async function imageShortcode(src, alt, sizes) {
   return Image.generateHTML(metadata, imageAttributes);
 }
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css");
   eleventyConfig.addWatchTarget("./src/css/");
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
@@ -33,4 +33,4 @@ module.exports = function (eleventyConfig) {
       output: "public",
     },
   };
-};
+}

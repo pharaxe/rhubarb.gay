@@ -1,15 +1,47 @@
 ---
-title: Rhubarb Is Gay
+title: Rhubarb Nido
 layout: base.njk
 ---
 
 {# TODO get the sourceset sizes working #}
-<div class="container">
+<div class="background-container">
   {% image
   "./src/img/pride.png",
   "Painterly artwork of Rhubarb with pansexual pride colors. A badge says Pride 2022.",
   "
  null
   " %}
+</div>
+
+<div class="absolute top-0 size-full">
+  <div class="w-full mt-10">
+    <div class="section-wrapper">
+      <section class="section container body">
+        <article class="inline-flex flex-col items-center gap-4 justify-center bg-stone-300/80 p-7 rounded-xl">
+          <p class="text-left">
+            <span class="font-bold">Rhubarb the Nidorino</span> 
+      (he/they) is a furry violinst who performs in VR and at furry conventions.
+    </p>
+        </article>
+
+        <a class="button inline-flex w-full items-center justify-center gap-4 rounded-full" target="_blank" rel="noreferrer" href="https://bsky.app/profile/rhubarb.gay">
+          <span class="icon icon--fa6-brands icon--fa6-brands--bluesky text-primary dark:text-white text-2xl'" aria-hidden="true"></span>
+      BlueSky
+    </a>
+        <a class="button inline-flex w-full items-center justify-center gap-4 rounded-full" target="_blank" rel="noreferrer" href="https://twitter.com/nidobun">
+          <span class="icon icon--fa6-brands icon--fa6-brands--twitter text-primary dark:text-white text-2xl'" aria-hidden="true"></span>
+      Twitter
+    </a>
+        <a class="button inline-flex w-full items-center justify-center gap-4 rounded-full" target="_blank" rel="noreferrer" href="https://youtube.com/@RhubarbNido">
+          <span class="icon icon--fa6-brands icon--fa6-brands--youtube text-primary dark:text-white text-2xl'" aria-hidden="true"></span>
+    YouTube
+    </a>
+        <a class="button inline-flex w-full items-center justify-center gap-4 rounded-full" target="_blank" rel="noreferrer" href="mailto:rhubarbnido@gmail.com">
+          <span class="icon icon--fa6-solid icon--fa6-solid--envelope text-primary dark:text-white text-2xl'" aria-hidden="true"></span>
+    Email
+    </a>
+      </section>
+    </div>
+  </div>
 </div>
 {% include 'footer.njk' %}

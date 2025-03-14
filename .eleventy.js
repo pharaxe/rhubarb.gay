@@ -38,7 +38,7 @@ export default function (eleventyConfig) {
    */
   eleventyConfig.addGlobalData("iconBrands", {
     theme: "fa6-brands",
-    list: ["youtube", "twitter", "bluesky", "twitch"],
+    list: ["youtube", "twitter", "bluesky", "twitch", "spotify"],
     get url() {
       const iconListParam = encodeURIComponent(this.list.join(","));
       return `https://api.iconify.design/${this.theme}.css?icons=${iconListParam}`;

@@ -26,6 +26,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./src/img/favicon": "/" });
   eleventyConfig.addPassthroughCopy({ "./src/img/ref": "/ref" });
   eleventyConfig.addPassthroughCopy({ "./src/img/sig": "/sig" });
+  eleventyConfig.addPassthroughCopy({ "./src/img/gif": "/img/gif" });
   eleventyConfig.addPassthroughCopy("./CNAME");
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(postcssPlugin);

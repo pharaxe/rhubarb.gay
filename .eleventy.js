@@ -2,9 +2,9 @@ import postcssPlugin from "@jgarber/eleventy-plugin-postcss";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import Image from "@11ty/eleventy-img";
 
-async function imageShortcode(src, alt, sizes) {
+async function imageShortcode(src, alt, sizes, classname) {
   let metadata = await Image(src, {
-    widths: [600, 900, 1500],
+    widths: [300, 600, 900, 1500],
     formats: ["avif", "webp", "png"],
     outputDir: "./public/img/",
   });
@@ -14,6 +14,7 @@ async function imageShortcode(src, alt, sizes) {
     sizes,
     loading: "lazy",
     decoding: "async",
+    class: classname,
   };
 
   // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)

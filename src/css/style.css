@@ -77,10 +77,9 @@ h6 {
 .background-container {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   flex-direction: row;
   flex: 1;
-  height: 100vh;
   background-image: linear-gradient(
     142deg,
     #ed7eb6 16.67%,
@@ -95,11 +94,13 @@ h6 {
     #428dc3 83.33%,
     #3f8dbe 100%
   );
-  background-size: 100vw 100vh;
+  background-size: 100vw 100%;
 }
-img {
-  object-fit: contain;
-  height: 100vh;
+.background-image {
+  img {
+    object-fit: contain;
+    height: 100vh;
+  }
 }
 .pageContainer {
   position: relative;
@@ -122,7 +123,7 @@ img {
   }
   .button,
   button.primary {
-    @apply py-2 px-5 bg-emerald-600/80 leading-relaxed tracking-wider uppercase font-semibold text-sm text-white rounded-md shadow-md transition-colors duration-300 hover:bg-emerald-950 focus:outline-none focus:ring ring-offset-1 focus:ring-emerald-600 inline-block w-full text-center hover:enabled:cursor-pointer;
+    @apply py-2 px-5 bg-emerald-600 leading-relaxed tracking-wider uppercase font-semibold text-sm text-white rounded-md shadow-md transition-colors duration-300 hover:bg-emerald-950 focus:outline-none focus:ring ring-offset-1 focus:ring-emerald-600 inline-block w-full text-center hover:enabled:cursor-pointer;
   }
   [type="button"].primary {
     @apply bg-emerald-600;
@@ -144,6 +145,7 @@ img {
   }
   .section-wrapper {
     @apply px-5 md:px-7;
+    max-width: 1290px;
   }
   .section {
     @apply max-w-lg m-auto space-y-5 md:space-y-7;

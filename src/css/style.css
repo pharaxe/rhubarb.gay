@@ -123,10 +123,10 @@ h6 {
   }
   .button,
   button.primary {
-    @apply py-2 px-5 bg-violet-800 leading-relaxed tracking-wider uppercase font-semibold text-sm text-white rounded-md shadow-md transition-colors duration-300 hover:bg-violet-900 focus:outline-none focus:ring ring-offset-1 focus:ring-violet-800 inline-block w-full text-center hover:enabled:cursor-pointer;
+    @apply py-2 px-5 bg-violet-700 leading-relaxed tracking-wider uppercase font-semibold text-sm text-white rounded-md shadow-md transition-colors duration-300 hover:bg-violet-900 focus:outline-none focus:ring ring-offset-1 focus:ring-violet-800 inline-block w-full text-center hover:enabled:cursor-pointer;
   }
   [type="button"].primary {
-    @apply bg-violet-800;
+    @apply bg-violet-700;
   }
   .inline-links a {
     @apply text-violet-800 underline hover:text-violet-950;

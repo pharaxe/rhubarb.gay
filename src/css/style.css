@@ -123,13 +123,13 @@ h6 {
   }
   .button,
   button.primary {
-    @apply py-2 px-5 bg-emerald-600 leading-relaxed tracking-wider uppercase font-semibold text-sm text-white rounded-md shadow-md transition-colors duration-300 hover:bg-emerald-950 focus:outline-none focus:ring ring-offset-1 focus:ring-emerald-600 inline-block w-full text-center hover:enabled:cursor-pointer;
+    @apply py-2 px-5 bg-violet-800 leading-relaxed tracking-wider uppercase font-semibold text-sm text-white rounded-md shadow-md transition-colors duration-300 hover:bg-violet-900 focus:outline-none focus:ring ring-offset-1 focus:ring-violet-800 inline-block w-full text-center hover:enabled:cursor-pointer;
   }
   [type="button"].primary {
-    @apply bg-emerald-600;
+    @apply bg-violet-800;
   }
   .inline-links a {
-    @apply text-emerald-800 underline hover:text-emerald-900;
+    @apply text-violet-800 underline hover:text-violet-950;
   }
   h1 {
     @apply text-4xl font-bold text-slate-800 text-center;

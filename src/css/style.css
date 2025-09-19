@@ -117,13 +117,19 @@ h6 {
  * DIY classless theme - leverage Tailwind's classes to compose your own classless theme!
  * This is extremely powerful if you know semantic html, accessibility, and good design principles.
  */
+
+:root {
+--button-color: #6c41a1;
+}
+
 @layer components {
+
   body {
     @apply text-slate-800 text-center bg-stone-50;
   }
   .button,
   button.primary {
-    @apply py-2 px-5 bg-violet-700 leading-relaxed tracking-wider uppercase font-semibold text-sm text-white rounded-md shadow-md transition-colors duration-300 hover:bg-violet-900 focus:outline-none focus:ring ring-offset-1 focus:ring-violet-800 inline-block w-full text-center hover:enabled:cursor-pointer;
+    @apply py-2 px-5 bg-[var(--button-color)] leading-relaxed tracking-wider uppercase font-semibold text-sm text-white rounded-md shadow-md transition-colors duration-300 hover:bg-violet-900 focus:outline-none focus:ring ring-offset-1 focus:ring-violet-800 inline-block w-full text-center hover:enabled:cursor-pointer;
   }
   [type="button"].primary {
     @apply bg-violet-700;

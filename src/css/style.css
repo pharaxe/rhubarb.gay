@@ -119,17 +119,21 @@ h6 {
  */
 
 :root {
---button-color: #6c41a1;
+  --primary: #6c41a1;
+  --secondary: #e5e7eb; /* Tailwind gray-200 */
 }
 
 @layer components {
 
-  body {
+  body l{
     @apply text-slate-800 text-center bg-stone-50;
   }
   .button,
   button.primary {
-    @apply py-2 px-5 bg-[var(--button-color)] leading-relaxed tracking-wider uppercase font-semibold text-sm text-white rounded-md shadow-md transition-colors duration-300 hover:bg-violet-900 focus:outline-none focus:ring ring-offset-1 focus:ring-violet-800 inline-block w-full text-center hover:enabled:cursor-pointer;
+    @apply py-2 px-5 bg-[var(--primary)] leading-relaxed tracking-wider uppercase font-semibold text-sm text-white rounded-md shadow-md transition-colors duration-300 hover:bg-violet-900 focus:outline-none focus:ring ring-offset-1 focus:ring-violet-800 inline-block w-full text-center hover:enabled:cursor-pointer;
+  }
+  .secondary {
+    @apply py-2 px-5 bg-transparent text-[var(--primary)] border-2 border-[var(--primary)] leading-relaxed tracking-wider uppercase font-semibold text-sm rounded-md shadow-md transition-colors duration-300 hover:bg-[var(--primary)] hover:text-white focus:outline-none focus:ring ring-offset-1 focus:ring-violet-800 inline-block w-full text-center hover:enabled:cursor-pointer;
   }
   [type="button"].primary {
     @apply bg-violet-700;

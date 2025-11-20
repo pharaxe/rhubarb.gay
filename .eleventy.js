@@ -28,6 +28,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./src/img/ref": "/ref" });
   eleventyConfig.addPassthroughCopy({ "./src/img/sig": "/sig" });
   eleventyConfig.addPassthroughCopy({ "./src/img/gif": "/img/gif" });
+  eleventyConfig.addPassthroughCopy({ "./src/img/schedule": "/img/schedule" });
   eleventyConfig.addPassthroughCopy("./CNAME");
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(postcssPlugin);

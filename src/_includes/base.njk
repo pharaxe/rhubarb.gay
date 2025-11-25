@@ -15,6 +15,11 @@
         <link rel="stylesheet" href="{{ icon.url | url }}"/>
         <link rel="stylesheet" href="{{ iconBrands.url | url }}"/>
         <title>{{ title }}</title>
+        <meta property="og:title" content="{{title or renderData.title or metadata.title | escape}}"/>
+        <meta property="og:url" content="{{url | escape }}"/>
+        <meta property="og:description" content="{{description or renderData.description | escape }}"/>
+        <meta property="og:image" content="{{image | escape}}"/>
+        <meta property="og:type" content="article"/>
     </head>
     <body>
         <div class="pageContainer">

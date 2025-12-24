@@ -29,6 +29,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./src/img/sig": "/sig" });
   eleventyConfig.addPassthroughCopy({ "./src/img/gif": "/img/gif" });
   eleventyConfig.addPassthroughCopy({ "./src/img/schedule": "/img/schedule" });
+  eleventyConfig.addPassthroughCopy({ "./src/img/photo": "/img/photo" });
   eleventyConfig.addPassthroughCopy({
     "./src/img/violin.png": "/img/rhubarb-violin.png",
   });

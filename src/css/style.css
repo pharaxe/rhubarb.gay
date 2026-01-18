@@ -124,8 +124,7 @@ h6 {
 }
 
 @layer components {
-
-  body l{
+  body l {
     @apply text-slate-800 text-center bg-stone-50;
   }
   .button,

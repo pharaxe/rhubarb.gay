@@ -1,0 +1,43 @@
+---
+title: Welcome to the Newsletter! - Rhubarb Nido
+layout: base.njk
+description: Thanks for confirming your newsletter subscription
+image: /img/rhubarb-violin.png
+url: rhubarb.gay
+---
+
+<div class="background-container min-h-screen">
+  <div class="section-wrapper">
+    <div class="flex justify-center items-center min-h-screen">
+      <div class="max-w-lg w-full mx-4">
+        <div class="flex w-full justify-center pd-4 mb-6">
+          <div class="mt-5">
+            {% image
+            "./src/img/heart.png",
+            "Rhubarb holding a big heart. Art by PocketPaws",
+            "300",
+            "drop-shadow-lg" %}
+          </div>
+        </div>
+
+        <section class="section container body pb-6">
+          <article class="inline-flex flex-col items-center gap-4 justify-center bg-white/90 p-7 rounded-xl">
+            <h1 class="text-2xl font-bold text-center mb-2">Welcome!</h1>
+            <p class="text-left">Thank you for confirming your subscription to my newsletter! I really appreciate it.
+            </p>
+            <p class="text-left">
+              You'll now receive updates about my latest performances, recordings, and adventures in VR and at conventions. Thanks for joining me on the fun adventures!
+            </p>
+            <p class="text-left text-sm text-gray-600 mt-4">
+              <a href="/" class="text-blue-600 hover:underline">Return to homepage</a>
+            </p>
+          </article>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  {% include 'footer.njk' %}
+</div>

@@ -1,0 +1,35 @@
+<div class="loading-spinner flex flex-col items-center justify-center py-16 px-8 ">
+  <div class="animate-spin rounded-full h-16 w-16 border-8 border-gray-300 border-t-gray-600 mb-4"></div>
+  <p aria-hidden="true" class="invisible">This text is here to prevent layout shift when the content loads. Nido nido nido nido</p>
+</div>
+
+<div class="confirm-content hidden">
+  <h1 class="text-2xl font-bold text-center mb-2">Confirm your email address</h1>
+  <p class="text-left mb-2">
+    Thanks for signing up for my newsletter! I've sent you a confirmation email.
+    Please check your inbox and click the confirmation link to complete your subscription.
+  </p>
+  <p class="text-left text-sm text-gray-600 mt-3">
+    Don't see the email? Check your spam folder or 
+    <a href="/" class="text-blue-600 hover:underline">return to the homepage</a> to try again.
+  </p>
+</div>
+
+<div class="success-content hidden">
+  <h1 class="text-2xl font-bold text-center mb-2">Welcome!</h1>
+  <p class="text-left mb-3">Thank you for confirming your subscription to my newsletter! I really appreciate it.
+  </p>
+  <p class="text-left">
+    You'll now receive updates about my latest performances, recordings, and adventures in VR and at conventions. Thanks for joining the chaos!
+  </p>
+  <p class="text-center text-sm text-gray-600 mt-4">
+    <a href="/" class="text-blue-600 hover:underline">Return to homepage</a>
+  </p>
+</div>
+
+<script>
+  // Store the page type for fallback
+  window.pageType = '{{ type }}';
+</script>
+
+{% include 'subscriber-script.njk' %}

@@ -23,6 +23,8 @@ async function imageShortcode(src, alt, sizes, classname) {
 
 export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/css/");
+  eleventyConfig.addWatchTarget("./src/js/");
+  eleventyConfig.addPassthroughCopy({ "./src/js/": "/js/" });
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
   eleventyConfig.addPassthroughCopy({ "./src/img/favicon": "/" });
   eleventyConfig.addPassthroughCopy({ "./src/img/ref": "/ref" });

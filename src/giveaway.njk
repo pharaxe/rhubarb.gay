@@ -1,0 +1,65 @@
+---
+title: T-Shirt Giveaway! - Rhubarb Nido
+layout: base.njk
+description: Sign up for a chance to win a Rhubarb t-shirt!
+image: /img/rhubarb-violin.png
+url: rhubarb.gay
+---
+
+<div class="background-container min-h-screen">
+  <div class="section-wrapper">
+    <div class="flex justify-center items-center min-h-screen">
+      <div class="max-w-lg w-full mx-4">
+        <div class="flex w-full justify-center pd-4 mb-6">
+          <div class="mt-5">
+            {% image
+            "./src/img/violin-sticker.png",
+            "Rhubarb playing violin. Art by Scruff",
+            "300",
+            "drop-shadow-lg" %}
+          </div>
+        </div>
+
+        <section class="section container body pb-6">
+          <article class="inline-flex flex-col items-center gap-4 justify-center bg-white/90 p-7 rounded-xl">
+            <h1 class="text-2xl font-bold text-center mb-2">Win a T-Shirt!</h1>
+            <p class="text-left mb-4">
+              Join my email list for a chance to win a limited edition Rhubarb t-shirt! 
+              I'll also keep you updated on my latest performances and releases.
+            </p>
+
+            <form
+              action="https://buttondown.com/api/emails/embed-subscribe/rhubarb"
+              method="post"
+              class="embeddable-buttondown-form flex flex-col w-full"
+            >
+              <div class="flex flex-col lg:flex-row w-full gap-3 lg:gap-0">
+                <label class="relative text-gray-400 focus-within:text-gray-600 flex-grow block">
+                  <span class="icon icon--fa6-solid icon--fa6-solid--envelope pointer-events-none absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-300 text-2xl" aria-hidden="true"></span>
+                  <input type="email"
+                    class="form-input border border-gray-300 py-2 px-4 bg-white placeholder-gray-400 text-gray-500 appearance-none w-full block pl-12 focus:outline-none focus:ring ring-offset-1 focus:ring-violet-900 shadow-md rounded-full lg:rounded-l-full lg:rounded-r-none h-11"
+                    placeholder="Your email address"
+                    required
+                    name="email" id="bd-email"/>
+                  <input type="hidden" name="tag" value="t-shirt-giveaway-feb-2026"/>
+                  <input type="hidden" name="utm_source" value="giveaway-page"/>
+                </label>
+                <button class="button h-11 inline-flex items-center justify-center gap-2 py-2 rounded-full lg:rounded-l-none lg:rounded-r-full whitespace-nowrap border border-gray-300 lg:border-l-0 text-white w-auto flex-grow-0 shadow-md" type="submit" >
+                  <span>Enter giveaway!</span>
+                </button>
+              </div>
+            </form>
+
+            <p class="text-center text-sm text-gray-600 mt-3">
+              <a href="/" class="text-blue-600 hover:underline">Return to homepage</a>
+            </p>
+          </article>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  {% include 'footer.njk' %}
+</div>

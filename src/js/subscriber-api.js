@@ -32,20 +32,11 @@ const handleError = () => {
     loadingSpinner.classList.add("hidden");
   }
 
-  // Show the default content for this page type
-  const pageType = window.pageType || "confirm";
-  if (pageType === "success") {
-    const successContent = document.querySelector(".success-content");
-    if (successContent) {
-      successContent.classList.remove("hidden");
-      successContent.classList.add("contents");
-    }
-  } else {
-    const confirmContent = document.querySelector(".confirm-content");
-    if (confirmContent) {
-      confirmContent.classList.remove("hidden");
-      confirmContent.classList.add("contents");
-    }
+  // Show the default content, asking for them to confirm their email
+  const confirmContent = document.querySelector(".confirm-content");
+  if (confirmContent) {
+    confirmContent.classList.remove("hidden");
+    confirmContent.classList.add("contents");
   }
 };
 

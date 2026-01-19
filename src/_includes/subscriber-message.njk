@@ -1,4 +1,4 @@
-<div class="loading-spinner flex flex-col items-center justify-center py-11 px-8 ">
+<div class="loading-spinner {% if type == 'success' %}hidden{% else %}flex{% endif %} flex-col items-center justify-center py-11 px-8 ">
   <div class="animate-spin rounded-full h-16 w-16 border-8 border-gray-300 border-t-gray-600 mb-1"></div>
   <p aria-hidden="true" class="invisible">This text is here to prevent layout shift when the content loads.</p>
 </div>
@@ -15,7 +15,7 @@
   </p>
 </div>
 
-<div class="success-content hidden">
+<div class="success-content {% if type == 'success' %}contents{% else %}hidden{% endif %}">
   <h1 class="text-2xl font-bold text-center mb-2">Welcome!</h1>
   <p class="text-left mb-3">Thank you for confirming your subscription to my newsletter! I really appreciate it.
   </p>
@@ -27,9 +27,6 @@
   </p>
 </div>
 
-<script>
-  // Store the page type for fallback
-  window.pageType = '{{ type }}';
-</script>
-
-{% include 'subscriber-script.njk' %}
+{% if type == 'confirm' %}
+  {% include 'subscriber-script.njk' %}
+{% endif %}

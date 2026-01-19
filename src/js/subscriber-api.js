@@ -1,5 +1,3 @@
-// Get email address from query parameters and call subscriber API
-
 const handleSuccess = (data) => {
   // Hide loading spinner
   const loadingSpinner = document.querySelector(".loading-spinner");

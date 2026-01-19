@@ -7,20 +7,53 @@ const handleSuccess = (data) => {
     loadingSpinner.classList.add("hidden");
   }
 
-  // Check if data has type property and if it's 'regular'
-  if (data && data.type === "regular") {
-    // Show the success content
-    const successContent = document.querySelector(".success-content");
-    if (successContent) {
-      successContent.classList.remove("hidden");
-      successContent.classList.add("contents");
+  // Check if user has t-shirt giveaway tag
+  const hasGiveawayTag =
+    data && data.tags && data.tags.includes("t-shirt-giveaway-feb-2026");
+
+  if (hasGiveawayTag) {
+    if (data.type === "unactivated") {
+      // Show giveaway inactive message
+      const giveawayInactiveContent = document.querySelector(
+        ".giveaway-inactive-content",
+      );
+      if (giveawayInactiveContent) {
+        giveawayInactiveContent.classList.remove("hidden");
+        giveawayInactiveContent.classList.add("contents");
+      }
+    } else if (data.type === "regular") {
+      // Show giveaway success message
+      const giveawaySuccessContent = document.querySelector(
+        ".giveaway-success-content",
+      );
+      if (giveawaySuccessContent) {
+        giveawaySuccessContent.classList.remove("hidden");
+        giveawaySuccessContent.classList.add("contents");
+      }
+    } else {
+      // Fallback to regular confirm content for other types with giveaway tag
+      const confirmContent = document.querySelector(".confirm-content");
+      if (confirmContent) {
+        confirmContent.classList.remove("hidden");
+        confirmContent.classList.add("contents");
+      }
     }
   } else {
-    // Show the confirm content for any other type or no type
-    const confirmContent = document.querySelector(".confirm-content");
-    if (confirmContent) {
-      confirmContent.classList.remove("hidden");
-      confirmContent.classList.add("contents");
+    // No giveaway tag - use regular newsletter logic
+    if (data && data.type === "regular") {
+      // Show the regular success content
+      const successContent = document.querySelector(".success-content");
+      if (successContent) {
+        successContent.classList.remove("hidden");
+        successContent.classList.add("contents");
+      }
+    } else {
+      // Show the regular confirm content
+      const confirmContent = document.querySelector(".confirm-content");
+      if (confirmContent) {
+        confirmContent.classList.remove("hidden");
+        confirmContent.classList.add("contents");
+      }
     }
   }
 };

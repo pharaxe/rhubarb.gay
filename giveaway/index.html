@@ -37,10 +37,10 @@
 
         <section class="section container body pb-6">
           <article class="inline-flex flex-col items-center gap-4 justify-center bg-white/90 p-7 rounded-xl">
-            <h1 class="text-2xl font-bold text-center mb-2">T-Shirt Giveaway!</h1>
-            <p class="text-left mb-4">
-              Join my newsletter for a chance to win an <span class="font-bold">Otter Chaos!</span>  t-shirt! 
-              I'll also send you news about my latest performances and releases.
+            <h1 class="text-2xl font-bold text-center mb-2">T&#8209;shirt giveaway!</h1>
+            <p class="text-left w-full mb-4">
+              Join Rhubarb's newsletter for a chance to win a free <span class="font-bold">Otter Chaos!</span>  t&#8209;shirt.
+              I'll randomly select 5 winners on Sunday, February 8th, 2026. If you win I'll reach out via email. Free shipping included.
             </p>
 
             <form
@@ -67,6 +67,8 @@
 
             <p class="text-center text-sm text-gray-600 mt-3">
               <a href="/" class="text-blue-600 hover:underline">Return to homepage</a>
+              <span class="mx-2">•</span>
+              <a href="#" id="terms-link" class="text-blue-600 hover:underline">Terms & Conditions</a>
             </p>
           </article>
         </section>
@@ -74,6 +76,92 @@
     </div>
   </div>
 </div>
+
+<!-- Terms & Conditions Modal -->
+<div id="terms-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+  <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+    <div class="p-6">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-bold">Terms & Conditions</h2>
+        <button id="close-modal" class="text-gray-500 hover:text-gray-700 text-xl font-bold">
+          &times;
+        </button>
+      </div>
+
+      <div class="space-y-4 text-gray-700">
+        <div>
+          <h3 class="font-semibold text-lg text-left mb-2">Start and end date:</h3>
+          <p>Feb 1st - Feb 8th, 2026</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-lg text-left mb-2">Conditions to enter:</h3>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Be 18+ years of age</li>
+            <li>Can't be family or in my band Otter Chaos!</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-left text-lg mb-2">How the giveaway works:</h3>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>I'll randomly select 5 winners on Sunday, Feb 8th from confirmed newsletter subscribers that have entered their email on this page.</li>
+            <li>Winners will need to respond to my email to claim their prize and provide shipping details. I'll pay shipping and handling!</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-6 text-center">
+        <button id="close-modal-btn" class="button inline-flex items-center justify-center gap-2 py-2 px-6 rounded-full text-white">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('terms-modal');
+    const termsLink = document.getElementById('terms-link');
+    const closeModalX = document.getElementById('close-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+
+    // Open modal
+    termsLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      modal
+        .classList
+        .remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+
+    // Close modal functions
+    function closeModal() {
+      modal
+        .classList
+        .add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    closeModalX.addEventListener('click', closeModal);
+    closeModalBtn.addEventListener('click', closeModal);
+
+    // Close modal when clicking outside
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Close modal with escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+  });
+</script>
 
 <div>
   <footer class="footer nowrap"></footer>

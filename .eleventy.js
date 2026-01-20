@@ -32,7 +32,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./src/img/gif": "/img/gif" });
   eleventyConfig.addPassthroughCopy({ "./src/img/schedule": "/img/schedule" });
   eleventyConfig.addPassthroughCopy({
-    "./src/img/happy.png": "/img/sticker/happy.png",
+    "./src/img/happy-small.png": "/img/sticker/happy-small.png",
   });
   eleventyConfig.addPassthroughCopy({ "./src/img/photo": "/img/photo" });
   eleventyConfig.addPassthroughCopy({

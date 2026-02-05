@@ -64,6 +64,7 @@ export default function (eleventyConfig) {
       "instagram",
       "tiktok",
       "facebook",
+      "paypal",
     ],
     get url() {
       const iconListParam = encodeURIComponent(this.list.join(","));

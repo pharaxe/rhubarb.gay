@@ -73,7 +73,15 @@ export default function (eleventyConfig) {
   });
   eleventyConfig.addGlobalData("icon", {
     theme: "fa6-solid",
-    list: ["envelope"],
+    list: ["envelope", "copy", "check"],
+    get url() {
+      const iconListParam = encodeURIComponent(this.list.join(","));
+      return `https://api.iconify.design/${this.theme}.css?icons=${iconListParam}`;
+    },
+  });
+  eleventyConfig.addGlobalData("iconSimple", {
+    theme: "simple-icons",
+    list: ["paypal", "venmo", "cashapp", "zelle"],
     get url() {
       const iconListParam = encodeURIComponent(this.list.join(","));
       return `https://api.iconify.design/${this.theme}.css?icons=${iconListParam}`;

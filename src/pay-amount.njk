@@ -1,0 +1,15 @@
+---
+layout: base.njk
+image: /img/icon.png
+url: rhubarb.gay
+pagination:
+  data: payAmounts
+  size: 1
+  alias: amount
+permalink: "/pay/{{ amount }}/"
+eleventyComputed:
+  title: "Pay Rhubarb ${{ amount }} - Rhubarb Nido"
+  description: "Pay Rhubarb ${{ amount }} with your payment service of choice"
+---
+
+{% include 'pay-card.njk' %}

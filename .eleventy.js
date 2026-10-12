@@ -1,6 +1,9 @@
 import postcssPlugin from "@jgarber/eleventy-plugin-postcss";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import Image from "@11ty/eleventy-img";
+import { ogImage } from "./og-image.js";
+
+const SITE_URL = "https://rhubarb.gay";
 
 async function imageShortcode(src, alt, sizes, classname) {
   let metadata = await Image(src, {
@@ -26,7 +29,13 @@ export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/js/");
   eleventyConfig.addPassthroughCopy({ "./src/js/": "/js/" });
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addGlobalData("siteUrl", SITE_URL);
+  eleventyConfig.addGlobalData("eleventyComputed.ogImage", () => async (data) => {
+    if (data.card !== true) return "";
+    return SITE_URL + (await ogImage());
+  });
   eleventyConfig.addPassthroughCopy({ "./src/img/favicon": "/" });
+  eleventyConfig.addPassthroughCopy({ "./src/img/og/pay-icon.jpg": "/img/og/pay-icon.jpg" });
   eleventyConfig.addPassthroughCopy({ "./src/img/ref": "/ref" });
   eleventyConfig.addPassthroughCopy({ "./src/img/sig": "/sig" });
   eleventyConfig.addPassthroughCopy({ "./src/img/gif": "/img/gif" });
